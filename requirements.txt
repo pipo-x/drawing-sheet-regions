@@ -1,0 +1,6 @@
+doclayout-yolo==0.0.4
+huggingface_hub  # doclayout-yolo imports it but does not list it
+torch>=2.0.1
+pymupdf>=1.24
+pillow>=10.1
+numpy
