@@ -8,10 +8,10 @@ sheets: 870 for training, 60 for validation and 136 for testing.
 Use it as the first step of reading a drawing. It tells the next step where to look: crop the legend
 before searching for its symbols, or read the title block for the sheet number.
 
-![A symbols sheet with every legend block boxed](examples/legend_sheet.jpg)
-<sub>A symbols sheet from a US Army Corps of Engineers standard design (ACP-STDG-004, public). Every
-box is drawn by this model. Each legend block is found. One mistake: the tall title strip on the right
-is marked `legend` (0.29).</sub>
+![A floor plan sheet with its drawings, legend, notes, schedule and title block boxed](examples/confinement_plan.jpg)
+<sub>A U.S. Air Force confinement facility standard design (sheet A-101, public). Every box is drawn
+by this model: both drawings, the module legend, the general notes, the room schedule and the title
+block. One mistake: the "not for construction" box is marked `table`.</sub>
 
 ## What it finds
 
@@ -79,8 +79,8 @@ symbols legend. It misses the title strip on the right.</sub>
 
 | | |
 |---|---|
-| ![Confinement facility plan sheet](examples/confinement_plan.jpg) | ![Security forces building sheet](examples/security_forces_building.jpg) |
-| **Plan, axonometric and schedule.** It finds both drawings, the module legend, the general notes, the room schedule and the title block. It marks the "not for construction" box as a table. | **Axonometrics and plans.** It finds both rows of drawings, the general notes, the floor finish and ceiling legends and the top of the title block. |
+| ![A symbols sheet with every legend block boxed](examples/legend_sheet.jpg) | ![Security forces building sheet](examples/security_forces_building.jpg) |
+| **Symbols sheet** (USACE, ACP-STDG-004). It finds every legend block and the general notes. It marks the tall title strip on the right as `legend` (0.29). | **Axonometrics and plans.** It finds both rows of drawings, the general notes, the floor finish and ceiling legends and the top of the title block. |
 | ![Kennel floor plan with legend and notes](examples/kennel_plan.jpg) | ![Site plan with notes and title block](examples/fire_station_site_plan.jpg) |
 | **Kennel floor plan.** It finds the drawing, its colour legend and the design notes. It misses the title strip on the right, and boxes the "not for construction" stamp as notes. | **Fire-station site plan.** It finds the drawing, both note blocks and the title block (bottom right). It marks the vertical project-name strip as `legend` (0.74). |
 
